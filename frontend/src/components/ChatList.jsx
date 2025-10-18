@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import MsgCard from "./MsgCard.jsx";
-import AddUserForm from "./AddUserForm.jsx";
+import AddUserForm from "./addUserForm.jsx";
 import { useAuthStore } from "../store/useAuthStore.js";
 import { useChatStore } from "../store/useChatStore.js";
 import { useNavigate } from "react-router-dom";
