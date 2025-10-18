@@ -1,0 +1,16 @@
+for user
+_id
+username
+email
+pw
+profile pic
+unicode
+createdAt 
+
+
+messages
+time
+sender
+receiver
+message
+image
