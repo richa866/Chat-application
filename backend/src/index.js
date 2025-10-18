@@ -17,7 +17,7 @@ app.use(express.urlencoded({ extended: true, limit: "10mb" }));
 app.use(cookieParser()); //will allow u to parse the cookie
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "https://chat-application-wj1k.vercel.app/",
     credentials: true,
   })
 );
