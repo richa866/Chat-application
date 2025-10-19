@@ -84,7 +84,9 @@ export const login = async (req, res) => {
     });
   } catch (error) {
     console.log("error in login controller");
-    res.status(400).json({ message: "issue with login controller" });
+    res
+      .status(400)
+      .json({ message: "issue with login controller", error: error.message });
   }
 };
 
