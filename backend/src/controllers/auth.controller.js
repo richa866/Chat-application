@@ -74,7 +74,7 @@ export const login = async (req, res) => {
     if (!pwCorrect) {
       return res.status(400).json({ message: "pw not correct" });
     }
-    generateToken(user.id, res);
+    generateToken(user._id, res);
 
     res.status(200).json({
       _id: user._id,
