@@ -10,7 +10,10 @@ dotenv.config(); // once u write this u can access the env variables
 
 // const app = express(); -deleting cause now i created it in socket.io
 
-const port = process.env.PORT;
+const port = process.env.PORT || 8000;
+if (process.env.NODE_ENV === "production") {
+  app.set("trust proxy", 1);
+}
 app.use(express.json({ limit: "10mb" }));
 app.use(express.urlencoded({ extended: true, limit: "10mb" }));
 //will help u parse the data
@@ -19,6 +22,7 @@ app.use(
   cors({
     origin: process.env.FRONTEND_URL,
     credentials: true,
+    allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
 //cors is used-CROSS ORIGIN POLICY- backend and frontend fcntion diff hosts so it blocks the req
